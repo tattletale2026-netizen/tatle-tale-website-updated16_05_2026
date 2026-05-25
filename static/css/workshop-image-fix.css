@@ -1,0 +1,26 @@
+/* Workshop chapter image alignment fix
+   Keeps the original chapter-wise images, centers the artwork,
+   and crops extra blank space from the bottom. */
+
+.workshop-chapter-image {
+  aspect-ratio: 3 / 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #efe2cf !important;
+  overflow: hidden !important;
+}
+
+.workshop-chapter-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+}
+
+@media (max-width: 900px) {
+  .workshop-chapter-image {
+    aspect-ratio: 16 / 10 !important;
+  }
+}
